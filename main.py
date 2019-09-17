@@ -3,9 +3,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 # Инициализация объектов DataFrame
-iris = read_csv('iris/iris.data')
-wine = read_csv('wine/wine.data')
-zoo = read_csv('zoo/zoo.data')
+iris = read_csv('iris.data')
+wine = read_csv('wine.data')
+zoo = read_csv('zoo.data')
 
 # Процедура случайного перемешивания и деления выборки на тестовую и обучающую
 wine_sample = DataFrame.sample(wine, frac=1)
@@ -16,6 +16,8 @@ label = LabelEncoder()
 dicts = {}
 label.fit(iris['Iris-setosa'].drop_duplicates())
 iris['Iris-setosa'] = label.transform(iris['Iris-setosa'])
+
+
 
 
 
